@@ -1,0 +1,28 @@
+Me
+--
+Public Key : (e1, N1)
+Private Key : (d1, N1)
+---------------
+Friends
+-------
+Public Key : (e0, N0)
+Private Key : (d0, N0)
+****************************************************
+
+Encryption Process  
+------------------
+I encrypt with my friend's public key : 
+C = (msg)^(e0) mod N0
+---------------------
+
+I sign this message by :
+1. calculating the hash of the message : H(M)
+2. encrypting the hash of the message with my private key : S = (H(M))^d1 mod N1
+
+
+Decryption Process
+------------------
+My friends decrypt the message using ther private key : m = C^(d0) mod N0
+Using my public key they calculate : s = S^(e1) mod N1
+By computing H(m) and comparing it to s: assert H(m) == s, they can ensure the message you sent them, is the message that they received.
+
