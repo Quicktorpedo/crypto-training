@@ -28,13 +28,7 @@ def asciiToString(binary_array):
 
 	return result
 
-msg = "label"
-
-decMsg=dec(msg, 13)
-
-print(decMsg)
-
-encMsg=asciiToString(decMsg)
-
-print(encMsg)
-
+key1 = "a6c8b6733c9b22de7bc0253266a3867df55acde8635e19c73313"
+key2 = "911404e13f94884eabbec925851240a52fa381ddb79700dd6d0d"
+key3 = "504053b757eafd3d709d6339b140e03d98b9fe62b84add0332cc"
+flag = ""
